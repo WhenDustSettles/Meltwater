@@ -12,7 +12,7 @@ Signin_button.click()
 Email = driver.find_element_by_id('username')
 Password = driver.find_element_by_id('password')
 Email.send_keys('animesh.r18a@gmail.com')
-Password.send_keys('************')
+Password.send_keys('************')  #I'm not dumb....lol
 LogIn = driver.find_element_by_xpath('//*[@type = "submit"]')
 LogIn.click()
 driver.get('https://www.linkedin.com/in/dipankar-mukherjee-ab645551/?originalSubdomain=in')
