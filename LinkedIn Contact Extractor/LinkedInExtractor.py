@@ -12,7 +12,7 @@ Signin_button.click()
 Email = driver.find_element_by_id('username')
 Password = driver.find_element_by_id('password')
 Email.send_keys('animesh.r18a@gmail.com')
-Password.send_keys('animeshsingh.123')
+Password.send_keys('************')
 LogIn = driver.find_element_by_xpath('//*[@type = "submit"]')
 LogIn.click()
 driver.get('https://www.linkedin.com/in/dipankar-mukherjee-ab645551/?originalSubdomain=in')
@@ -38,15 +38,15 @@ Name=[]
 for names in indiv_cont.xpath('child::*/attribute::alt').extract():
     Name.append(names)
 
-# YaaaY!!! we got the names...!
+# Got the names...!
 
-# Let's get the Description boys..!!!...
+# Let's get the Description ..!!!...
 
 desc = []
 for data in indiv_cont.xpath('div/p/text()').extract():
     desc.append(data)
 
-#Yooooooooooooo...>..!!! We got the description toooo!!! Damn Son!!!
+
 
 
 ##6th June, adding Designation and Company of the first 10 journalists(for now)
@@ -92,6 +92,6 @@ with open('data_incep_4.csv','w',encoding = "utf-8") as myfile:
         try:
             writer.writerow([Name[i],desc[i],final_links[i],desig[i],comp[i]])
         except:
-1
+
             writer.writerow([Name[i],desc[i],final_links[i]])
 myfile.close()
